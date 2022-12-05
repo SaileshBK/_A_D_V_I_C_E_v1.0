@@ -1,1 +1,7 @@
-<p>incoming-advice works!</p>
+<nb-card>
+  <nb-card-header>Your free Advice tool!</nb-card-header>
+  <span class="caption-2 text-hint"> {{incomingAdvice}}</span>
+  <nb-card-body class="example-items-rows">
+    <button nbButton status="success">Generate<nb-icon icon="download-outline" (click)="getData()"></nb-icon></button>
+  </nb-card-body>
+</nb-card>
