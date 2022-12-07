@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Advice } from '../advice';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { ApiService } from '../api.service';
 export class IncomingAdviceComponent {
 
 
- incomingAdvice : string | undefined;
+ incomingAdvice : string;
+ data : Advice;
 
   constructor(private api:ApiService) { }
 
@@ -19,9 +21,9 @@ export class IncomingAdviceComponent {
   }
 
   getData(){
-    this.api.getAdvices().subscribe((response : any) => {
-
-      this.incomingAdvice = response.slip.advice;
+    this.api.get().subscribe((response : Advice) => {
+      this.data = response;
+      this.incomingAdvice = this.data.slip.advice;
 
     },
     (error) => {
