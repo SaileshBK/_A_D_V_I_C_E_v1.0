@@ -5,25 +5,26 @@ import { ApiService } from '../api.service';
 @Component({
   selector: 'app-incoming-advice',
   templateUrl: './incoming-advice.component.html',
-  styleUrls: ['./incoming-advice.component.scss']
+  styleUrls: ['./incoming-advice.component.scss'],
 })
 export class IncomingAdviceComponent {
 
 
  incomingAdvice : string;
  data : Advice;
+ hideButton = false;
 
   constructor(private api:ApiService) { }
 
-  ngOnInt() {
-    this.getData();
-
-  }
-
   getData(){
+    this.hideButton = true;
     this.api.get().subscribe((response : Advice) => {
       this.data = response;
       this.incomingAdvice = this.data.slip.advice;
+      setTimeout(() => {
+        this.hideButton = false;
+      }, 1500);
+
 
     },
     (error) => {
