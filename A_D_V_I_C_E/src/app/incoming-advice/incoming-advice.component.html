@@ -5,4 +5,11 @@
   <div>
     <button *ngIf="!hideButton" (click)="getData()">Generate</button>
   </div>
+  <button (click)="saveData()">Save</button>
+</div>
+
+<div>
+  <div *ngIf="savedIncomingAdvice.length > 0">
+    <span *ngFor="let item of savedIncomingAdvice"> {{item}} </span>
+  </div>
 </div>

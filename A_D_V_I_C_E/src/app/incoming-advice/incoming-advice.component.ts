@@ -13,6 +13,7 @@ export class IncomingAdviceComponent {
  incomingAdvice : string;
  data : Advice;
  hideButton = false;
+ savedIncomingAdvice : string[] = [];
 
   constructor(private api:ApiService) { }
 
@@ -24,13 +25,15 @@ export class IncomingAdviceComponent {
       setTimeout(() => {
         this.hideButton = false;
       }, 1500);
-
-
     },
     (error) => {
       alert(JSON.stringify(error));
     });
 
+  }
+
+  saveData() {
+    this.savedIncomingAdvice.push(this.incomingAdvice);
   }
 
 }
