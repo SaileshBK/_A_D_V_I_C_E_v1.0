@@ -8,7 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule, NbButtonModule, NbCardModule, NbIconModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { HttpClientModule } from '@angular/common/http';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTabsModule} from '@angular/material/tabs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,11 @@ import { HttpClientModule } from '@angular/common/http';
     NbButtonModule,
     NbCardModule,
     NbIconModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    MatToolbarModule,
+    MatTabsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
