@@ -1,4 +1,11 @@
 <div>
+  <header>
+    <marquee direction="left" scrolldelay="100" behavior="loop">
+      <div class="marqueeText" *ngFor="let item of savedIncomingAdvice">
+        <q>{{item}}</q>
+      </div>
+    </marquee>
+  </header>
   <mat-tab-group lass="container">
     <mat-tab label="Generate">
       <div class="left">
