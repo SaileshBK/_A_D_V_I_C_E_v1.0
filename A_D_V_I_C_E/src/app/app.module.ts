@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatSidenavModule} from '@angular/material/sidenav';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     ReactiveFormsModule,
     MatToolbarModule,
     MatTabsModule,
+    MatSidenavModule
 
   ],
   providers: [],

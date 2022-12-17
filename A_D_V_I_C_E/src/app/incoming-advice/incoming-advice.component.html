@@ -1,3 +1,15 @@
+<mat-sidenav-container class="test-container">
+
+  <mat-sidenav #sidenav mode="side"> Content
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <p><button mat-button (click)="sidenav.toggle()">Test</button></p>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
 <div>
   <header>
     <marquee direction="left" scrolldelay="100" behavior="loop">
@@ -13,7 +25,7 @@
           <span> {{incomingAdvice}}</span>
         </div>
         <div>
-          <button *ngIf="!hideButton" (click)="getData()">Generate</button>
+          <button *ngIf="!hideButton" (click)="getData()">Generates</button>
         </div>
         <button (click)="saveData()">Save</button>
       </div>

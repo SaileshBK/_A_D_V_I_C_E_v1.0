@@ -8,8 +8,6 @@ import { ApiService } from '../api.service';
   styleUrls: ['./incoming-advice.component.scss'],
 })
 export class IncomingAdviceComponent {
-
-
  incomingAdvice : string;
  data : Advice;
  hideButton = false;
