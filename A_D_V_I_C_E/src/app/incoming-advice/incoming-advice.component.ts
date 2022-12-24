@@ -33,5 +33,4 @@ export class IncomingAdviceComponent {
   saveData() {
     this.savedIncomingAdvice.push(this.incomingAdvice);
   }
-
 }
